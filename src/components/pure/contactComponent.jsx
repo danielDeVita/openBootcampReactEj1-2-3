@@ -1,0 +1,22 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Contact } from '../../models/contact.class';
+
+const ContactComponent = ({ contact }) => {
+    return (
+        <div>
+            <h1>Nombre: {contact.nombre} </h1>
+            <h2>Apellido: {contact.apellido} </h2>
+            <h3>Email: {contact.email} </h3>
+            <h4>Conectado: {contact.conectado ? 'Contacto en línea' : 'Contacto no disponible'}</h4>
+        </div>
+    );
+};
+
+
+ContactComponent.propTypes = {
+    contact: PropTypes.instanceOf(Contact)
+};
+
+
+export default ContactComponent;
